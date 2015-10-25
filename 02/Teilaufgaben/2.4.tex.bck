@@ -46,9 +46,10 @@ $3(3^{k} \cdot T(n-k) +  \Sigma_{i=0}^{k-1} (3^i \cdot 2)	$ &=&$ 3^{k+1} \cdot T
 \subsubsection*{2.4.2} 
 Ermitteln der Groessenordnung mittels des Mastertheorems:
  
-$ S(n) :=  \{ $
+\begin{align*}
+S(n) := \left\{
 \begin{tabular}{l}
 c,\ fuer\ n = 1;\\
-$16 \cdot S(\frac{n}{4}) + n^2 $ \\
+$16 \cdot S(\frac{n}{4}) + n^2  \right $\\
 \end{tabular}
-
+\end{align*}
