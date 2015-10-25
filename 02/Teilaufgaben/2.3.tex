@@ -1,0 +1,8 @@
+$f(n),g(n) \in O(h(n)) \implies f(n) \cdot g(n) \in O((h(n))^2)$ ist zu zeigen.\\\\
+Dabei seien folgende Aequivalenzen gegeben:\\
+$f(n) \in O(h(n)) \iff f(n) \leq c' \cdot h(n)\ fuer\ alle\ n > n_0'$\\
+$g(n) \in O(h(n)) \iff g(n) \leq c'' \cdot h(n)\ fuer\ alle\ n > n_0''$\\\\
+Durch multiplizieren der rechten Aequivalenz-Seiten beider Funktionen erhalten wir folgendes:\\
+$f(n) \cdot g(n) \leq (c' \cdot c'') \cdot (h(n))^2\ fuer\ alle\ n > n_0,\ wobei\ n_0 = n_0' \cdot n_0''$\\
+$\to f(n) \cdot g(n) \in O((h(n))^2)$\\\\
+Damit ist die Richtigkeit der Implikation gezeigt.
