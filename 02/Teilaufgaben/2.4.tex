@@ -18,7 +18,7 @@ Dabei nehmen wir an dass: $3^k \cdot T(n-k) + \Sigma_{i=0}^{k-1}$ gilt.
 
 Die Funktion T(n) schränkt den Gültigkeitsbereich nicht ausreichend ein, da für negative Werte für n die Rekursion nie abbricht.
 
-Für die Induktion nehmen wir an, dass $n \in N$ liegt.
+Für die Induktion nehmen wir an, dass $n \in \mathbb{N}$ liegt.
 
 Daher ist unser Induktionsanfang auch bei $n=1$.
 
@@ -47,8 +47,14 @@ $3(3^{k} \cdot T(n-k) +  \Sigma_{i=0}^{k-1} (3^i \cdot 2)	$ &=&$ 3^{k+1} \cdot T
 Ermitteln der Groessenordnung mittels des Mastertheorems:
  
 $ S(n) :=  \{ $
-\begin{tabular}{l}
-c,\ fuer\ n = 1;\\
-$16 \cdot S(\frac{n}{4}) + n^2 $ \\
-\end{tabular}
+\begin{tabular}{lr}
+$c,$&$ fuer\ n = 1;$\\
+$16 \cdot S(\frac{n}{4}) + n^2,$&$ sonst; $ \\
+\end{tabular}\\\\
+Fall 1: $S(n) \in \Theta(n^{\log_b(a)}),\ falls\ f(n) \in O(n^{\log_b(a)-\epsilon})\ fuer\ ein\ \epsilon>0$\\
+$Wegen\ \log_b(a)\ mit\ b=4\ und\ a=16 \to \log_4(16)=2\ und\\ f(n)=n^2\ ist\ f(n) \notin O(n^{2-\epsilon}),\ da\ mit\ \epsilon > 0\ O(f(n)) > O(n^{2- \epsilon})$\\\\
+Fall 2: $S(n) \in \Theta(n^{\log_b(a)}\log_2(n)),\ falls f(n) \in \Theta(n^{log_b(a)})$\\
+$mit f(n) und \log_b(a) wie oben ist f(n) \in \Theta(n^2)$\\
+$\lim_{n->\infty} \frac{n^2}{n^2} = \lim_{n->\infty} 1 = 1,\ da\ 0 < 1 < \infty \to f(n) \in \Theta$\\\\
+Hiermit gilt $T(n) \in \Theta(n^{\log_b(a)}\log_2(n))$
 
