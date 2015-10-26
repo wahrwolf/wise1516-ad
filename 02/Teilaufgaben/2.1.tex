@@ -4,4 +4,30 @@ $3n^3 - 6n + 20$ liegt in $n^3$ da für ein festes c (z.B. c=10000) immer $c \cd
 Formal gilt: $ \lim\limits_{n \to \infty}3n^3-6n+20=\lim\limits_{n \to \infty}n^3 $ damit liegt die Funktion aber genau in $O(n^3)$
 
 \subsubsection*{2.1.2}
-Zuerst werden wir zeigen dass
+
+\begin{tabular}{lcl}
+$ \lim\limits_{n \to \infty}(n^2 \cdot log(n)) $&$\leq $&$ \lim\limits_{n \to \infty}(n^3) $\\
+& nach dem Satz von l'Hospital gilt  & \\
+$ \lim\limits_{n \to \infty}(2n \cdot log(n) + \frac{n^2}{n}) $&$\leq $&$ \lim\limits_{n \to \infty} (3n^2)$ \\
+$ \lim\limits_{n \to \infty}(2n \cdot log(n) + n) $&$\leq $&$ \lim\limits_{n \to \infty} (n^2)$ \\
+& Hier kann man wieder die Regeln von l'Hospital anwenden:  & \\
+$ \lim\limits_{n \to \infty}(2 \cdot log(n) + \frac{2n}{n} ) $&$\leq $&$ \lim\limits_{n \to \infty} (2n)$ \\
+$ \lim\limits_{n \to \infty}(2 \cdot log(n) + 2 ) $&$\leq $&$ \lim\limits_{n \to \infty} (2n)$ \\
+& Ein letzes Mal kann man die Regel anwenden: & \\
+$ \lim\limits_{n \to \infty}(\frac{2}{n}+2 ) $&$\leq $&$ \lim\limits_{n \to \infty} (2n)$ \\
+$ 0 + 2=2  $&$\leq $&$ \infty$ \\
+\end{tabular} \\
+
+Also gilt die erste Behauptung schonmal. Nun wollen wir zeigen dass die Funktion auch in $\Omega(n^2)$liegt.
+
+\begin{tabular}{lcl}
+$ \lim\limits_{n \to \infty}(n^2 \cdot log(n)) $&$\geq $&$ \lim\limits_{n \to \infty}(n^2) $\\
+& Wir leiten beide Funktionen ab (nach l'Hospital) &\\
+$ \lim\limits_{n \to \infty}(2n \cdot log(n) + \frac{n^2}{n}) $&$\geq $&$ \lim\limits_{n \to \infty} (2 n)$ \\
+$ \lim\limits_{n \to \infty}(2 \cdot log(n) + 2) $&$\leq $&$ \lim\limits_{n \to \infty} (2)$ \\
+$ \infty $&$\geq$& $ 2 $
+\end{tabular} \\
+
+Wie hier ebenfalls gut zu erkennen ist liegt die Funktion ebenfalls in $\Omega(n^2)$.
+
+Damit ist die Aussage uneingeschränkt wahr.
