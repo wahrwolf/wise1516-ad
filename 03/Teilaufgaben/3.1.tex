@@ -1,0 +1,19 @@
+Für den ersten Algorithmus gilt:
+
+Die äußere Schleife wird n mal betreten.
+
+Die inneren beiden Schleifen werden jeweils n mal betreten.
+
+Daraus folgt eine gesamte Laufzeit von $(n*(n+n))$ was in $O(n^2)$ liegt.
+
+
+
+Für den zweiten Algorithmus gilt:
+
+Die äußere Schleife wird n mal betreteten (Grenze bei 2n, aber Schritt bei n+=2).
+
+Die Innere Schleife wird n mal ausgeführt (Schleife wird $2 \cdot n$ mal betreten, geht aber nur bis $ frac{n}{2} $)
+
+Daraus folgt eine gesamte Laufzeit von $(n \cdot (frac{n}{2} \cdot 2) ) \in O(n^2)$.
+
+
