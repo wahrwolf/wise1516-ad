@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.4)  4 NOV 2015 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.4)  6 NOV 2015 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -313,7 +313,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.13 D
-      ie äußere Schleife wird n mal betreteten (Grenze bei 2n, aber Schrit...
+      ie äußere Schleife wird n mal betreten (Grenze bei 2n, aber Schritt ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -349,8 +349,6 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -510,7 +508,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.17 D
-      araus folgt eine gesamte Laufzeit von $(n \cdot (\frac{n}{2} \cdot 2) ...
+      araus folgt eine gesamte Laufzeit von $(n \cdot (2 \cdot \frac{n}{2}) ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -560,13 +558,13 @@ Overfull \hbox (12.66904pt too wide) in paragraph at lines 17--18
  []
 
 
-Overfull \hbox (14.01001pt too wide) in paragraph at lines 17--18
-\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/n/10 ^^A
+Overfull \hbox (11.6667pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/n/10 (2 \OMS/cmsy/m/n/10 ^^A
  []
 
 
-Overfull \hbox (22.22221pt too wide) in paragraph at lines 17--18
-\OT1/cmr/m/n/10 2)) \OMS/cmsy/m/n/10 2
+Overfull \hbox (24.56552pt too wide) in paragraph at lines 17--18
+[]\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 2
  []
 
 

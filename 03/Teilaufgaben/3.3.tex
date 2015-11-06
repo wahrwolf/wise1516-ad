@@ -1,0 +1,24 @@
+$T_1(n)\ :=\ \bigg\{$
+\begin{tabular}{ll}
+$c_1$,&für $n = 1$\\
+$8 \cdot T_1(\frac{n}{2}) + d_1 \cdot n^3,$ &sonst
+\end{tabular}\\
+mit $a = 8$ und $b = 2$ ist $\log_b(a) = 3$ und $f(n) = d_1 \cdot n^3$\\
+Unter Verwendung des 1. Falles des Mastertheorems gilt:\\
+$T(n) \in  \Theta(n^{log_b(a)}),$ falls $f(n) \in O(n^{log_b(a) - \epsilon})$ für ein $\epsilon > 0$.\\
+Dies gilt hier leider nicht, da für kein $\epsilon > 0$ die Ungleichung $d_1 \cdot n^3 \leq n^{3 - \epsilon}$ erfüllt ist, beziehungsweise nur für bestimmte $d_1$.\\
+Betrachtung des 2. Falles des Mastertheorems:\\
+Es gilt: $T(n) \in  \Theta(n^{log_b(a)}\cdot log_2(n)),$ falls $f(n) \in \Theta(n^{log_b(a)})$\\
+Da für $\lim_{n\to\infty}\frac{f(n)}{n^{log_b(a)}} = \lim_{n\to\infty}\frac{d_1\cdot n^3}{n^{3}} = \lim_{n\to\infty}\frac{d_1\cdot 1}{1} = d_1$ die Beziehung $f(n) \in \Theta(n^{log_b(a)})$ erfüllt ist. Damit gilt $T_1(n) \in \Theta(n^{log_b(a)}\cdot log_2(n))$.
+
+$T_2(n)\ :=\ \bigg\{$
+\begin{tabular}{ll}
+$c_2$,&für $n = 1$\\
+$5 \cdot T_2(\frac{n}{4}) + d_2 \cdot n^2$,&sonst
+\end{tabular}\\
+mit $a=5$ und $b=4$ ist $log_b(a) \approx 1,16$ und $f(n) = d_2 \cdot n^2$\\
+Unter Betrachtung des 3.Falles des Mastertheorems gilt:\\
+$T(n) \in \Theta(f(n))$, falls $f(n)\in \Omega(n^{log_b(a)+\epsilon})$ für ein $\epsilon > 0$ und $a \cdot f(\frac{n}{b})\leq \delta \cdot f(n)$ für ein $\delta < 1$ und große $n$.\\
+Mit $\epsilon = 0,5$:\\
+$\lim_{n\to\infty}\frac{f(n)}{n^{log_b(a)+\epsilon}} = \lim_{n\to\infty}\frac{d_2\cdot n^2}{n^{1,16 + 0,5}} = \lim_{n\to\infty}\frac{d_2\cdot n^2}{n^{1,66}} = \lim_{n\to\infty}\frac{d_2\cdot n^{0,34}}{1} = \infty$\\
+Hiermit ist $f(n) \in \Omega(n^{log_b(a) + \epsilon})$.
