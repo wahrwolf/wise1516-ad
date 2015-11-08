@@ -1,3 +1,4 @@
+\paragraph{ALGO1}
 Für den ersten Algorithmus gilt:
 
 Die äußere Schleife wird n mal betreten.
@@ -7,13 +8,21 @@ Die inneren beiden Schleifen werden jeweils n mal betreten.
 Daraus folgt eine gesamte Laufzeit von $(n*(n+n))$ was in $O(n^2)$ liegt.
 
 
-
+\paragraph{ALGO2}
 Für den zweiten Algorithmus gilt:
 
 Die äußere Schleife wird n mal betreten (Grenze bei 2n, aber Schritt bei n+=2).
 
-Die Innere Schleife wird n mal ausgeführt (Schleife wird $2 \cdot n$ mal betreten, geht aber nur bis $ \frac{n}{2} $)
+Die innere Schleife wird n mal ausgeführt (Schleife wird $2 \cdot n$ mal betreten, geht aber nur bis $ \frac{n}{2} $)
 
 Daraus folgt eine gesamte Laufzeit von $(n \cdot (2 \cdot \frac{n}{2}) ) \in O(n^2)$.
 
 
+\paragraph{ALGO3}
+Für den dritten Algorithmus gilt:
+
+Die äußere Schleife wird $ \sqrt{n} $ mal betreten, was aus der Äquivalenzumformung von $i \cdot i < n $ folgt.
+
+Die innere Schleife wird $ \log_{2}{n} $ mal betreten, was aus der Halbierung von j, das mit n initialisiert wird, bei jeder Iteration folgt.
+
+Daraus folgt eine gesamte Laufzeit von $ \sqrt{n} \cdot \log_{2}{n} $.
