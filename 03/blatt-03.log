@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.12)  8 NOV 2015 19:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.11.12)  8 NOV 2015 21:58
 entering extended mode
 **blatt-03.tex
 
@@ -679,11 +679,22 @@ Overfull \hbox (15.04863pt too wide) in paragraph at lines 24--25
 
 )
 ("D:\Users\Roberto Seidel\Dropbox\Studium Uni,FH\Uni Hamburg\FS5 - WiSe1516\AD\
-Git-Abgabe\03\Teilaufgaben/3.2.tex")
-("D:\Users\Roberto Seidel\Dropbox\Studium Uni,FH\Uni Hamburg\FS5 - WiSe1516\AD\
-Git-Abgabe\03\Teilaufgaben/3.3.tex" [1
+Git-Abgabe\03\Teilaufgaben/3.2.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 1--6
 
-{D:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+ []
+
+[1
+
+{D:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (1.13622pt too wide) in paragraph at lines 12--13
+[]\OT1/cmr/m/n/12 Ausserdem wer-den un-abhaen-gig da-von und un-abhaen-gig von-
+ein-an-der zwei
+ []
+
+)
+("D:\Users\Roberto Seidel\Dropbox\Studium Uni,FH\Uni Hamburg\FS5 - WiSe1516\AD\
+Git-Abgabe\03\Teilaufgaben/3.3.tex")
 ("D:\Users\Roberto Seidel\Dropbox\Studium Uni,FH\Uni Hamburg\FS5 - WiSe1516\AD\
 Git-Abgabe\03\Teilaufgaben/3.4.tex") [2]
 ("D:\Users\Roberto Seidel\Dropbox\Studium Uni,FH\Uni Hamburg\FS5 - WiSe1516\AD\
@@ -691,7 +702,7 @@ Git-Abgabe\03\blatt-03.aux") )
 Here is how much of TeX's memory you used:
  10842 strings out of 493921
  197782 string characters out of 3147254
- 238681 words of memory out of 3000000
+ 239681 words of memory out of 3000000
  13908 multiletter control sequences out of 15000+200000
  12096 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -707,7 +718,7 @@ onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb>
-Output written on blatt-03.pdf (2 pages, 118409 bytes).
+Output written on blatt-03.pdf (2 pages, 120546 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
