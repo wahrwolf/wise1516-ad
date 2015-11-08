@@ -1,0 +1,14 @@
+$T_(n)\ :=\ \bigg\{$
+\begin{tabular}{ll}
+$c_1$, &fuer $n < 4$\\
+$2 \cdot T_(\frac{n}{4}) + 2 \cdot c_2 \cdot c_3 \cdot n + c_4,$ &sonst
+\end{tabular}\\
+
+
+Die Abbruchbedingung fuer die Rekursion ist eine Arraylaenge < 4, bei der die Funktion zudem keine von der Arraylaenge bzw. von n abhaengigen Berechnungen mehr ausfuehrt. Daraus ergibt sich: $c_1$ fuer $n < 4$.
+
+In allen anderen Faellen werden einzelne Zuweisungsoperationen wie sum = 0, x = A.laenge/4 oder r = y mit konstantem Aufwand ausgefuehrt, was zu $+ c_4$ in der Rekurrenzgleichung fuehrt.
+
+Ausserdem werden unabhaengig davon und unabhaengig voneinander zwei for-Schleifen, deren Ruempfe ebenfalls einen konstanten Aufwand haben, jeweils n mal aufgerufen. Deswegen kommt der Summand $2 \cdot c_2 \cdot c_3 \cdot n$ hinzu.
+
+Insbesondere wird auch noch 2 mal auf jeweils einem Viertel des urspruenglichen Arrays die Funktion erneut aufgerufen, weswegen als entscheidender Summand noch $2 \cdot T_(\frac{n}{4})$ addiert werden muss.
