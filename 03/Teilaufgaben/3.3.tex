@@ -21,4 +21,11 @@ Unter Betrachtung des 3.Falles des Mastertheorems gilt:\\
 $T(n) \in \Theta(f(n))$, falls $f(n)\in \Omega(n^{log_b(a)+\epsilon})$ für ein $\epsilon > 0$ und $a \cdot f(\frac{n}{b})\leq \delta \cdot f(n)$ für ein $\delta < 1$ und große $n$.\\
 Mit $\epsilon = 0,5$:\\
 $\lim_{n\to\infty}\frac{f(n)}{n^{log_b(a)+\epsilon}} = \lim_{n\to\infty}\frac{d_2\cdot n^2}{n^{1,16 + 0,5}} = \lim_{n\to\infty}\frac{d_2\cdot n^2}{n^{1,66}} = \lim_{n\to\infty}\frac{d_2\cdot n^{0,34}}{1} = \infty$\\
-Hiermit ist $f(n) \in \Omega(n^{log_b(a) + \epsilon})$.
+Hiermit ist $f(n) \in \Omega(n^{log_b(a) + \epsilon})$.\\\\
+$T_3(n)\ :=\ \bigg\{$
+\begin{tabular}{ll}
+$c_3$,&für $n = 1$\\
+$6 \cdot T_3(\frac{n}{3}) + d_3 \cdot n \cdot \log n$,&sonst
+\end{tabular}\\
+mit $a = 6$ und $b = 3$ ist $log_b(a) \approx 1,63$ und $f(n) = d_3 \cdot n \cdot \log n$\\
+
