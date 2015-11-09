@@ -28,4 +28,11 @@ $c_3$,&für $n = 1$\\
 $6 \cdot T_3(\frac{n}{3}) + d_3 \cdot n \cdot \log n$,&sonst
 \end{tabular}\\
 mit $a = 6$ und $b = 3$ ist $log_b(a) \approx 1,63$ und $f(n) = d_3 \cdot n \cdot \log n$\\
+Unter Betrachtung des 1. Falles des Mastertheorems gilt:\\
+$T(n) \in  \Theta(n^{log_b(a)}),$ falls $f(n) \in O(n^{log_b(a) - \epsilon})$ für ein $\epsilon > 0$.\\
+Wir wählen $\epsilon = 0,13$ und wollen damit obiges zeigen.\\
+$\lim_{n \to \infty} \frac{n \cdot log_2(n)}{n^{1.63 - 0.13}} = \lim_{n \to \infty} \frac{n \cdot log_2(n)}{n^{\frac{3}{2}}} = \lim_{n \to \infty} \frac{log_2(n)}{n^{\frac{1}{2}}}$\\
+Unter Anwendung der Regel von L'Hospital erhalten wir folgendes:\\
+$\lim_{n \to \infty} \frac{\frac{1}{n \cdot ln(2)}}{\frac{1}{n^{\frac{1}{2}}}} = \lim_{n \to \infty} \frac{1}{n^{\frac{1}{2}}}\cdot ln(2) = 0$\\
+Damit ist $f(n) \in O(n^{log_b(a) - \epsilon})$, wodurch $T_3(n) \in \Theta(n^{log_b(a)})$ gilt.
 
