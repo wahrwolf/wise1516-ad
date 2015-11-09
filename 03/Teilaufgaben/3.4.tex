@@ -1,0 +1,30 @@
+\begin{verbatim}
+// Der Arrayindex beginnt bei 1.
+merge(A,l,q,r)
+    int curA = l;
+    int curB = q+1;
+    Array C = new Array;
+    int curC = 1;
+
+    while ((q - curA) > -1 && (r - curB) > -1)
+        if (A[curA] <= A[curB])
+            C[curC] = A[curA]
+            ++curA
+        else
+            C[curC] = A[curB]
+            ++curB
+        ++curC
+
+    if ((q - curA) == -1)
+        while((r - curB) > -1)
+            C[curC] = A[curB]
+            ++curB
+            ++curC
+    else
+        while((q - curA) > -1)
+            C[curC] = A[curA]
+            ++curA
+            ++curC
+
+    return C;
+\end{verbatim}
