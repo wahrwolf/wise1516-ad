@@ -1,4 +1,4 @@
-\paragraph{Implementation der merge-Funktion}
+\subsection*{3.4.1}
 \begin{verbatim}
 // Der Arrayindex beginnt bei 1.
 merge(A,l,q,r)
@@ -30,6 +30,31 @@ merge(A,l,q,r)
     return C;
 \end{verbatim}
 
-\paragraph{Schleifeninvariante}
+\subsection*{3.4.2}
+Wir zerlegen das Array in Teilarrays, um anschließend eine Konfliktanalyse mit den Teilarrays durchzuführen.\\
+Nach Abschluss werden die beiden Arrays zusammengeführt, wobei die Konflikte der beiden Arrays aufeinander geprüft werden.\\
+Folgender Pseudocode soll den Algorithmus darstellen:
+\begin{verbatim}
+checkForConflicts(A,l,r)
+    if (l < r) then
+        q = (l+r)/2
+        checkForConflicts(A,l,q)
+        checkForConflicts(A,q+1,r)
+        countForConflicts(A,l,q,r)
+    end if
 
-
+countConflicts(A,l,q,r)
+    curA = l
+    curB = q+1
+    count = 0
+    while curA <= q
+        if (A[curA] > A[curB]) then
+            count++
+        end if
+        curB++
+        if (curB > r) then
+            curB = q+1
+            curA++
+        end if
+return count
+\end{verbatim}
