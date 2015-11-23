@@ -1,13 +1,9 @@
 \subsection*{1. 2-SAT}
 
-2-SAT: Menge aller aussagenlogischen Formeln, die mindestens zwei erfüllende Belegungen haben \\
-
+2-SAT: Menge aller aussagenlogischen Formeln, die mindestens zwei erfüllende Belegungen haben \\\\
 Zu zeigen: 2-SAT $\in$ NPC \\
-
-Vorgehen: Abbilden auf bereits vorhandenes NPC-Problem SAT \\
-
+Vorgehen: Abbilden auf bereits vorhandenes NPC-Problem SAT \\\\
 SAT ist die Menge aller aussagenlogischen Formeln die erfüllbar sind, die also mindestens eine erfüllbare Belegung besitzen. Von SAT wissen wir, dass es ein NP-vollständiges Problem ist.\\
-
 Jetzt ist 2-SAT lediglich eine Repräsentation dieses Problems mit einem zusätzlichen Zähler, um festzustellen, ob eine Formel mindestens 2 erfüllbare Belegungen besitzt. Dadurch entscheiden sich die Probleme nur gering voneinander und wir stellen fest, dass 2-SAT, ebenso wie SAT ein NP-vollständiges Problem ist.
 
 \subsection*{2. MINES}
@@ -24,3 +20,4 @@ $k_i$ benachbarte Knoten aus $M$ hat
 \textbf{Beweis für $MINES \in NPC$:}\\
 Wir raten, für einen in $C$ befindlichen Knoten, in welchen benachbarten Knoten, Minen seien müssen, damit die Beschriftungen der nachfolgenden Knoten aus $C$ nicht verletzt werden. Dies setzen wir für alle Knoten in $C$ fort. Hiermit gilt $C \in NP$.\\\\
 Wir wollen nun SAT auf unser Problem reduzieren.\\
+Damit ist SAT $\leq_p$ $MINES$, wodurch $MINES \in NPC$, da SAT $\in NPC$. 
