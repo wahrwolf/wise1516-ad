@@ -18,6 +18,7 @@ enthalten, wobei jeder Knoten $v_i \in C$\\
 $k_i$ benachbarte Knoten aus $M$ hat
 \end{tabular}\}\\\\
 \textbf{Beweis für $MINES \in NPC$:}\\
-Wir raten, für einen in $C$ befindlichen Knoten, in welchen benachbarten Knoten, Minen seien müssen, damit die Beschriftungen der nachfolgenden Knoten aus $C$ nicht verletzt werden. Dies setzen wir für alle Knoten in $C$ fort. Hiermit gilt $C \in NP$.\\\\
-Wir wollen nun SAT auf unser Problem reduzieren.\\
-Damit ist SAT $\leq_p$ $MINES$, wodurch $MINES \in NPC$, da SAT $\in NPC$. 
+Als Zertifikat nehmen wir die Menge $C$ und schauen, ob jeder Knoten mit der in ihm gespeicherten Anzahl an Minen enthaltenden Knoten verbunden ist. Dies ist leicht in polynomieller Zeit festzustellen. Dies zeigt $MINES \in NP$.\\\\
+Wir wollen nun SAT auf unser Problem reduzieren.\\\\
+Dazu sei $\phi = (A_1 \land ... \land A_k) \land (B_1 \land ... \land B_j)$, wobei $A_i$ benachbarte Knoten darstellen, mit einer Mine, und $B_i$ Knoten ohne Mine.\\
+Damit ist SAT $\leq_p$ $MINES$, wodurch $MINES \in NPC$, da SAT $\in NPC$.
