@@ -1,0 +1,42 @@
+\subsection{InorderTreeWalk}
+
+\begin{lstlisting}
+InorderTreeWalk(T, x)
+	Stack S = {}
+	Set visited = {}
+	
+	S.push(x)
+	aktKnoten = x
+	visited.add(x)
+	
+	while (S != {})
+	
+		while (links[aktKnoten] != nil && !visited.contains(links[aktKnoten]))
+			aktKnoten = links[aktKnoten]
+			S.push(aktKnoten)
+			visited.add(aktKnoten)
+		endwhile
+
+		if (S != {})
+			if (rechts[aktKnoten] == nil)
+				print S.pop()
+			endif
+		endif
+		if (S != {})
+			if (rechts[S.top()] != nil)
+				aktKnoten = rechts[S.top()]
+				visited.add(aktKnoten)
+				print S.pop()
+				S.push(aktKnoten)
+			else
+				aktKnoten = S.top()
+				visited.add(aktKnoten)
+			endif
+		endif
+		
+	endwhile
+\end{lstlisting}
+
+... Erläuterung zur Arbeitsweise ...
+
+\subsection{Tree Minimum}
