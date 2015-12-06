@@ -51,3 +51,12 @@ Damit diese Schleife insbesondere bei teilweise entarteten Bäumen nicht in eine
 
 
 \subsection*{Tree Minimum}
+\begin{lstlisting}
+TreeMinimum(x)
+if links[x] == nil then
+    return x
+else
+    return TreeMinimum(links[x])
+end if
+\end{lstlisting}
+Der Algorithmus geht die linken Teilbäume durch, bis der nächste Teilbäume 'nil' sein würde und gibt anschließend das Element aus, dass gerade betrachtet wird, denn dieses ist das Minimum. Anschließend werden die rekursiven Aufrufe rückwärts wieder abgebaut, wobei das Minimum bis zum ersten Aufruf von TreeMinimum(x) durchgereicht wird und schließlich als Resultat des Algorithmus zurückgegeben wird.
