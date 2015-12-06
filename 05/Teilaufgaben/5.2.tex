@@ -1,4 +1,4 @@
-\subsection{InorderTreeWalk}
+\subsection*{InorderTreeWalk}
 
 \begin{lstlisting}
 InorderTreeWalk(T, x)
@@ -11,7 +11,8 @@ InorderTreeWalk(T, x)
 	
 	while (S != {})
 	
-		while (links[aktKnoten] != nil && !visited.contains(links[aktKnoten]))
+		while (links[aktKnoten] != nil &&
+		!visited.contains(links[aktKnoten]))
 			aktKnoten = links[aktKnoten]
 			S.push(aktKnoten)
 			visited.add(aktKnoten)
@@ -39,4 +40,4 @@ InorderTreeWalk(T, x)
 
 ... Erläuterung zur Arbeitsweise ...
 
-\subsection{Tree Minimum}
+\subsection*{Tree Minimum}
