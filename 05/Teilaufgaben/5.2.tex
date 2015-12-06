@@ -17,16 +17,15 @@ InorderTreeWalk(T, x)
 			visited.add(aktKnoten)
 		endwhile
 
-		if (S != {})
-			if (rechts[aktKnoten] == nil)
-				print S.pop()
-			endif
+		if (rechts[aktKnoten] == nil)
+			print key[S.pop()]
 		endif
+			
 		if (S != {})
 			if (rechts[S.top()] != nil)
 				aktKnoten = rechts[S.top()]
 				visited.add(aktKnoten)
-				print S.pop()
+				print key[S.pop()]
 				S.push(aktKnoten)
 			else
 				aktKnoten = S.top()
@@ -37,6 +36,18 @@ InorderTreeWalk(T, x)
 	endwhile
 \end{lstlisting}
 
-... Erläuterung zur Arbeitsweise ...
+\begin{tabbing}
+\\
+\end{tabbing}
+
+Um die Rekursion "nachzustellen" werden grundsätzlich 2 verschachtelte Schleifen und ein Stack verwendet. Der Stack enthält die Knoten, die besucht wurden aber selbst noch ausgegeben werden müssen oder sogar dessen Kinder noch besucht werden müssen. Um die Operationen innerhalb einer Iteration zu vereinfachen, wird die Referenz auf den aktuelle Knoten allerdings zusätzlich in einer eigenen Variable gespeichert. Als Eingabe wird ein Binärbaum T und ein Knoten x daraus erwartet. Wenn x nicht die Wurzel von T ist, wird nur der Teilbaum unter x (einschließlich x) betrachtet und durchlaufen, weil immer nur Schritte nach oben oder "zur Seite" gemacht werden.
+
+Die äußere Schleife dient dazu, den am weitesten links stehenden - also den kleinsten - Knoten im Teilbaum, der in der jeweiligen Iteration betrachtet wird, auszugeben, falls er schon gefunden wurde und in den rechten Teilbaum zu wechseln. 
+Der aktuelle Knoten wird nur ausgegeben und aus dem Stack entfernt, falls er keine Kinder hat (ansonsten wird entweder direkt erst die innere Schleife ausgeführt, um weiter nach links zu gehen oder nach rechts gegangen, bevor der aktuelle Knoten ausgegeben und aus dem Stack entfernt wird).
+
+Die innere Schleife geht zum tiefsten linken Nachfahren, indem sie in jeder Iteration den linken Kindsknoten des aktuellen Knoten auf den Stack pusht. 
+Damit diese Schleife insbesondere bei teilweise entarteten Bäumen nicht in einem Zweig hängen bleibt (indem sie gegen die äußere Schleife arbeitet), werden die besuchten Knoten zusätzlich markiert und nicht mehrmals hinzugefügt.
+
+
 
 \subsection{Tree Minimum}
