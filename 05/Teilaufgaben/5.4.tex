@@ -1,0 +1,6 @@
+\subsection*{Beweis für $BIG-CLIQUE \in NPC$}
+$BIG-CLIQUE =\\ \{\langle G_{BC},\frac{n}{2}\rangle\ |\ G_{BC}\ enthaelt\ mindestens\ K^{\frac{n}{2}}\ als\ Teilgraphen, wobei\ n=|V_{G_{BC}}|\}$
+
+\subsubsection*{Beweis:$\ BIG-CLIQUE \in NP$}
+Als Zertifikat nehmen wir eine Menge $V' \subset V(G_{BC}$, die eine $BIG-CLIQUE$ bilden.\\
+Dieses Zertifikat ist polynomial in der Eingabelänge und zudem lässt sich leicht in polynomialer Zeit prüfen, ob alle Knoten verbunden sind, indem man für je zwei Knoten $u, v \in V'$ testet, ob $\{u,v\}$ eine Kante in $E(G_{BC})$ ist. Dies zeigt $BIG-CLIQUE \in NP$. $ _\square$ 
