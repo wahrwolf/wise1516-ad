@@ -11,7 +11,8 @@ InorderTreeWalk(T, x)
 	
 	while (S != {})
 	
-		while (links[aktKnoten] != nil && !visited.contains(links[aktKnoten]))
+		while (links[aktKnoten] != nil 
+		&& !visited.contains(links[aktKnoten]))
 			aktKnoten = links[aktKnoten]
 			S.push(aktKnoten)
 			visited.add(aktKnoten)
