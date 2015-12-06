@@ -1,0 +1,14 @@
+Ein Graph G mit n Knoten hätte zwischen zwei Knoten s und t maximal n-2 Knoten. 
+
+Um durch das Löschen eines Knoten v != s,t zwischen s und t \textit{nicht} alle s-t-Pfade zu zerstören, müsste es mindestens 2 Pfade zwischen s und t geben. Für jeden Pfad stünden dann aber nur $n/2 - 1$ Knoten zur Verfügung, was die Bedingung $d(s,t) > n/2$ verletzt.
+
+\begin{tabbing}
+\end{tabbing}
+
+Ein Algorithmus, der v findet, benötigt den Graphen $G=(V, E)$ und alle Pfade zwischen s und t aus V, für die die Bedingung $d(s,t) > n/2$ gilt.
+
+Dann kann der Algorithmus jeden der Knoten von den Pfaden einzeln testweise löschen. Falls er anschließend keinen Pfad mehr zwischen s und t findet, hat er einen entsprechenden Knoten v gefunden. Sonst muss er den gelöschten Knoten wieder hinzufügen und den nächsten ausprobieren.
+
+Die Korrektheit eines solchen Algorithmus ergibt sich daraus, dass jeder Knoten, der potenziell die beschriebenen Eigenschaften hat, überprüft wird. Außerdem existiert immer mindestens ein Knoten mit diesen Eigenschaften, wie wir oben gezeigt haben.
+
+Da der zu untersuchende Graph zwischen s und t maximal n-2 Knoten hat, muss der Algorithmus maximal n-2 Knoten prüfen, was zu einer Laufzeit von $O(n)$ führt. Einen linearen Zusatzaufwand verursacht das Löschen und Wiederherstellen (auch hier werden maximal $(n-2)+(n-3)$ Operationen ausgeführt), wodurch sich insgesamt eine Laufzeit in $O(n+m)$ ergibt.
