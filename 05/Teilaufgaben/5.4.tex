@@ -2,5 +2,16 @@
 $BIG-CLIQUE =\\ \{\langle G_{BC},\frac{n}{2}\rangle\ |\ G_{BC}\ enthaelt\ mindestens\ K^{\frac{n}{2}}\ als\ Teilgraphen, wobei\ n=|V_{G_{BC}}|\}$
 
 \subsubsection*{Beweis:$\ BIG-CLIQUE \in NP$}
-Als Zertifikat nehmen wir eine Menge $V' \subset V(G_{BC}$, die eine $BIG-CLIQUE$ bilden.\\
-Dieses Zertifikat ist polynomial in der Eingabelänge und zudem lässt sich leicht in polynomialer Zeit prüfen, ob alle Knoten verbunden sind, indem man für je zwei Knoten $u, v \in V'$ testet, ob $\{u,v\}$ eine Kante in $E(G_{BC})$ ist. Dies zeigt $BIG-CLIQUE \in NP$. $ _\square$ 
+Als Zertifikat nehmen wir eine Menge $V' \subseteq V(G_{BC})$, die eine $BIG-CLIQUE$ bilden.\\
+Dieses Zertifikat ist polynomial in der Eingabelänge und zudem lässt sich leicht in polynomialer Zeit prüfen, ob alle Knoten verbunden sind, indem man für je zwei Knoten $u, v \in V'$ testet, ob $\{u,v\}$ eine Kante in $E(G_{BC})$ ist. Dies zeigt $BIG-CLIQUE \in NP$. $ _\square$
+
+\subsubsection*{Reduktion:$\ CLIQUE \leq_p BIG-CLIQUE$}
+Wir wollen $CLIQUE$ mit $BIG-CLIQUE$ darstellen mit $CLIQUE = \{\langle G_C, k\rangle\ |\ G_C\ enthaelt\ einen\ K^k\ als\ Teilgraphen\}\ und\ l = |V_{G_C}|.$\\
+Dafür betrachten wir 3 Fälle:\\\\
+\textbf{Fall 1:} $l = 2k$\\
+Dies ist genau schon die, von $BIG-CLIQUE$ geforderte Vorgabe und wir können so einfach $BIG-CLIQUE$ verwenden.\\\\
+\textbf{Fall 2:} $l < 2k$\\
+In diesem Fall bauen wir einen neuen Graphen $G'$, indem wir zu $G_C$ $2k - l$ neue, isolierte Knoten hinzufügen. Hier ist offensichtlich, dass $G'$ eine k-Clique hat, wenn auch $G_C$ eine hat. Außerdem ist $|V(G')| = 2k$, weswegen wir $BIG-CLIQUE$ verwenden können.\\\\
+\textbf{Fall 3:} $l > 2k$\\
+Im Fall, dass $l > 2k$ ist bauen wir $G'$, indem wir $l - 2k$ vollständig verbundene Knoten zu $G_C$ hinzufügen. Da $k + (l -2k) = l - k$ ist, hat $G'$ eine (l-k)-Clique, wenn $G_C$ eine k-Clique hat. Da $|V(G')| = 2n - 2k$ ist, haben wir erneut eine Äquivalenz zu $BIG-CLIQUE$.\\\\
+In Anbetracht dieser 3 Fälle können wir $CLIQUE$ auf $BIG-CLIQUE$ reduzieren und wegen der Tatsache, dass $CLIQUE \in NPC$ ist, ist auch $BIG-CLIQUE \in NPC$. $ _\square$
