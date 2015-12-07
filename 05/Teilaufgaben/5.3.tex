@@ -13,13 +13,45 @@ Dies ist ein Widerspruch, da der Graph lediglich n Knoten hat.
 
 Also muss es immer einen Knoten v geben der in allen Verbindungen von s nach t vorhanden ist.
 
+---
+
+Algorithmus:
+Führe eine Tiefensuche von s nach t durch.
+
+	Beachte folgende Sonderregeln:
+
+	Bei jeder Abzweigung erhöhe einen Zähler
+	Markiere den Elternknoten der Abzweigung mit aktuellem Zählerstand
 
 
-Ein Algorithmus, der v findet, benötigt den Graphen $G=(V, E)$ und alle Pfade zwischen s und t aus V, für die die Bedingung $d(s,t) > n/2$ gilt.
+Gehe den Pfad von s nach t durch:
+	Ist der Knoten mit einem Zähler beschriftet?
+		Reduziere Zähler um 1
+	
+		Ist eines der End-Elemente Teil des Erfolgspfads?
+			Markiere Knoten im Erfolgspfad mit akutellem Zähler
+		Sonst:
+			Reduziere alle Markierungen nach dem Einstiegsknoten um 1
 
-Dann kann der Algorithmus jeden der Knoten von den Pfaden einzeln testweise löschen. Falls er anschließend keinen Pfad mehr zwischen s und t findet, hat er einen entsprechenden Knoten v gefunden. Sonst muss er den gelöschten Knoten wieder hinzufügen und den nächsten ausprobieren.
+Hat t einen einzigen Nachbarn?
+	der Nacbhar ist v
+Sonst:
+	der erste Knoten auf dem Pfad t -> s der Sprungmarkierung von 1 hat ist v
 
-Die Korrektheit eines solchen Algorithmus ergibt sich daraus, dass jeder Knoten, der potenziell die beschriebenen Eigenschaften hat, überprüft wird. Außerdem existiert immer mindestens ein Knoten mit diesen Eigenschaften, wie wir oben gezeigt haben.
+Begründung:
 
-Da der zu untersuchende Graph zwischen s und t maximal n-2 Knoten hat, muss der Algorithmus maximal n-2 Knoten prüfen, was zu einer Laufzeit von $O(n)$ führt. Einen linearen Zusatzaufwand verursacht das Löschen und Wiederherstellen (auch hier werden maximal $(n-2)+(n-3)$ Operationen ausgeführt), wodurch sich insgesamt eine Laufzeit in $O(n+m)$ ergibt.
+Laufzeit:
+
+Der Algorithmus besteht aus 3 Teilen:
+	Die Tiefensuche mit einer Laufzeit von $ n + |V|= $ 
+		- Die Tiefesuche liegt in $ O(n^2)$ 
+		- Für die Anzahl der Kanten siehe unten
+	
+	Die Markierung hat eine Laufzeit von n
+		- Jeder Knoten wird maximal 1x betrachtet
+
+	Die Prüfung hat eine Laufzeit von max $\frac{n/2} - 1 $
+		- Jeder Knoten im kürzten Pfad wird maximal 1x betrachtet
+
+Also ergibt sich insgesammt eine Laufzeit die in O(n^2) liegt.
 
