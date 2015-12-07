@@ -16,7 +16,7 @@ In diesem Fall bauen wir einen neuen Graphen $G'$, indem wir zu $G_C$ $2k - l$ n
 Im Fall, dass $l > 2k$ ist bauen wir $G'$, indem wir $l - 2k$ vollständig verbundene Knoten zu $G_C$ hinzufügen. Da $k + (l -2k) = l - k$ ist, hat $G'$ eine (l-k)-Clique, wenn $G_C$ eine k-Clique hat. Da $|V(G')| = 2n - 2k$ ist, haben wir erneut eine Äquivalenz zu $BIG-CLIQUE$.\\\\
 In Anbetracht dieser 3 Fälle können wir $CLIQUE$ auf $BIG-CLIQUE$ reduzieren und wegen der Tatsache, dass $CLIQUE \in NPC$ ist, ist auch $BIG-CLIQUE \in NPC$. $ _\square$
 
-\subsection*{5.4.2 Maximal große Clique}
+\subsection*{5.4.2 Algorithmus: Bestimmung maximal großer Clique}
 \begin{lstlisting}
 FindBiggestClique(G)
 //Set up a cliqueset for each vertex
