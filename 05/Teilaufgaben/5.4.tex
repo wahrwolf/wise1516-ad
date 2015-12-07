@@ -1,4 +1,4 @@
-\subsection*{Beweis für $BIG-CLIQUE \in NPC$}
+\subsection*{5.4.1 Beweis für $BIG-CLIQUE \in NPC$}
 $BIG-CLIQUE =\\ \{\langle G_{BC},\frac{n}{2}\rangle\ |\ G_{BC}\ enthaelt\ mindestens\ K^{\frac{n}{2}}\ als\ Teilgraphen, wobei\ n=|V_{G_{BC}}|\}$
 
 \subsubsection*{Beweis:$\ BIG-CLIQUE \in NP$}
@@ -15,3 +15,44 @@ In diesem Fall bauen wir einen neuen Graphen $G'$, indem wir zu $G_C$ $2k - l$ n
 \textbf{Fall 3:} $l > 2k$\\
 Im Fall, dass $l > 2k$ ist bauen wir $G'$, indem wir $l - 2k$ vollständig verbundene Knoten zu $G_C$ hinzufügen. Da $k + (l -2k) = l - k$ ist, hat $G'$ eine (l-k)-Clique, wenn $G_C$ eine k-Clique hat. Da $|V(G')| = 2n - 2k$ ist, haben wir erneut eine Äquivalenz zu $BIG-CLIQUE$.\\\\
 In Anbetracht dieser 3 Fälle können wir $CLIQUE$ auf $BIG-CLIQUE$ reduzieren und wegen der Tatsache, dass $CLIQUE \in NPC$ ist, ist auch $BIG-CLIQUE \in NPC$. $ _\square$
+
+\subsection*{5.4.2 Maximal große Clique}
+\begin{lstlisting}
+FindBiggestClique(G)
+//Set up a cliqueset for each vertex
+    Array cliques = new Array[|V_G|];
+    for a < |V_G| do
+        cliques[a] = new Set;
+    endfor
+    
+//Add v_i and every vertex adjacent to v_i to cliqueset of v_i
+//if that vertex is also adjacent to every vertex in the set
+    for v_i in V_G do
+        cliques[i].add(v_i);
+        for v_j in (V_G\v_i) do
+            if (v_i,v_j) in E_G then
+                bool isIn = true;
+                for v_k in cliques[i] do
+                    if (v_j,v_k) not in E_G then
+                	     isIn = false;
+                	     break;
+                    endif
+                endfor
+                if isIn == true then
+                     cliques[i].add(v_j);
+                endif
+            endif
+        endfor
+    endfor
+    
+//Compare counts of cliquesets and return the one with
+//the most elements as the biggest clique in the graph
+    Set biggestclique = new Set;
+    for clique in cliques do
+        if clique.count() > biggestclique.count() then
+            biggestclique = clique;
+        endif
+    endfor
+    
+    return biggestclique;
+\end{lstlisting}
