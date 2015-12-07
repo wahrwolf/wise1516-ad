@@ -21,7 +21,7 @@ In Anbetracht dieser 3 Fälle können wir $CLIQUE$ auf $BIG-CLIQUE$ reduzieren u
 FindBiggestClique(G)
 //Set up a cliqueset for each vertex
     Array cliques = new Array[|V_G|];
-    for a < |V_G| do
+    for a = 0 to |V_G|-1 do
         cliques[a] = new Set;
     endfor
     
