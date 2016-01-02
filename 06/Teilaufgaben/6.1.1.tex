@@ -1,0 +1,52 @@
+\newcommand{\sfill}{white}
+\newcommand{\Afill}{white}
+\newcommand{\Bfill}{white}
+\newcommand{\Cfill}{white}
+\newcommand{\Dfill}{white}
+\newcommand{\Efill}{white}
+\newcommand{\Ffill}{white}
+\newcommand{\Gfill}{white}
+
+\begin{tabular}{ccc}
+
+Graph & Queue & Adjazenzliste \\
+\gdef\sfill{red}
+\input{Teilaufgaben/graph_g.tex} &
+s &
+ \\
+\gdef\sfill{green}
+\input{Teilaufgaben/graph_g.tex} &
+&
+ \\
+\gdef\Afill{red}
+\gdef\Bfill{red}
+\gdef\Cfill{red}
+
+\input{Teilaufgaben/graph_g.tex} &
+
+A, B, C&
+ \\
+
+\gdef\sfill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+A, B, C&
+s \\
+
+\gdef\Afill{green}
+\input{Teilaufgaben/graph_g.tex} &
+B, C&
+s \\
+
+\gdef\Dfill{red}
+\gdef\Efill{red}
+\input{Teilaufgaben/graph_g.tex} &
+B, C, D, E &
+s \\
+
+\gdef\Afill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+B, C, D, E &
+s, A \\
+
+\end{tabular}
+
