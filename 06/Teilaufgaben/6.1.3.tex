@@ -1,3 +1,5 @@
+\newpage
+\subsection*{6.1.3 Tiefensuchwald}
 \input{Teilaufgaben/default_node.tex}
 \gdef\sdesc{s[/]}
 \gdef\Adesc{A[/]}
@@ -8,31 +10,60 @@
 \gdef\Fdesc{F[/]}
 \gdef\Gdesc{G[/]}
 
-\begin{tabular}{c}
-Graph\\
+In der folgenden Darstellung ist die Beschriftung wie folgt:\\
+\textbf{\emph{Knotenname[d[v]/f[v]]}}
+\begin{longtable}{c}
+\textbf{Schritte der Erstellung des Tiefensuchwaldes}\\
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\sfill{gray}
+\gdef\sfill{lightgray}
 \gdef\sdesc{s[1/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Afill{gray}
+\gdef\Afill{lightgray}
 \gdef\Adesc{A[2/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Dfill{gray}
+\gdef\Dfill{lightgray}
 \gdef\Ddesc{D[3/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Bfill{gray}
+\gdef\Bfill{lightgray}
 \gdef\Bdesc{B[4/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Efill{gray}
+\gdef\Efill{lightgray}
 \gdef\Edesc{E[5/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Cfill{gray}
-\gdef\Cdesc{s[6/]}
+\gdef\Cfill{lightgray}
+\gdef\Cdesc{C[6/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Ffill{gray}
+\gdef\Ffill{lightgray}
 \gdef\Fdesc{F[7/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\gdef\Gfill{gray}
+\gdef\Gfill{lightgray}
 \gdef\Gdesc{G[8/]}
 \input{Teilaufgaben/graph_g.tex}\\
-\end{tabular}
+\gdef\Gfill{green}
+\gdef\Gdesc{G[8/9]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\Ffill{green}
+\gdef\Fdesc{F[8/10]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\Cfill{green}
+\gdef\Cdesc{C[8/11]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\Efill{green}
+\gdef\Edesc{E[8/12]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\Bfill{green}
+\gdef\Bdesc{B[8/13]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\Dfill{green}
+\gdef\Ddesc{D[8/14]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\Afill{green}
+\gdef\Adesc{A[8/15]}
+\input{Teilaufgaben/graph_g.tex}\\
+\gdef\sfill{green}
+\gdef\sdesc{s[8/16]}
+\input{Teilaufgaben/graph_g.tex}
+\end{longtable}
+Unser Tiefensuchwald besteht aus genau einem Tiefensuchbaum, der sich wie folgt durch den Graphen windet:\\
+$s \to A \to D \to B \to E \to C \to F \to G$\\
+Die Rückführung ist genau anders herum.
