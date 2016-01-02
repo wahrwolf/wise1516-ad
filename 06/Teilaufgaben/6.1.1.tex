@@ -1,13 +1,6 @@
-\newcommand{\sfill}{white}
-\newcommand{\Afill}{white}
-\newcommand{\Bfill}{white}
-\newcommand{\Cfill}{white}
-\newcommand{\Dfill}{white}
-\newcommand{\Efill}{white}
-\newcommand{\Ffill}{white}
-\newcommand{\Gfill}{white}
+\input{Teilaufgaben/default_node.tex}
 
-\begin{tabular}{ccc}
+\begin{longtable}{ccc}
 
 Graph & Queue & Adjazenzliste \\
 \gdef\sfill{red}
@@ -48,5 +41,75 @@ s \\
 B, C, D, E &
 s, A \\
 
-\end{tabular}
+\gdef\Bfill{green}
+\input{Teilaufgaben/graph_g.tex} &
+C, D, E&
+s, A \\
+
+\gdef\Bfill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+C, D, E&
+s, A, B\\
+
+\gdef\Cfill{green}
+\input{Teilaufgaben/graph_g.tex} &
+D, E&
+s, A, B \\
+
+\gdef\Ffill{red}
+\input{Teilaufgaben/graph_g.tex} &
+D, E, F &
+s, A, B\\
+
+\gdef\Cfill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+D, E, F &
+s, A, B, C \\
+
+\gdef\Dfill{green}
+\input{Teilaufgaben/graph_g.tex} &
+E, F &
+s, A, B, C\\
+
+\gdef\Gfill{red}
+\input{Teilaufgaben/graph_g.tex} &
+E, F, G&
+s, A, B, C\\
+
+\gdef\Dfill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+E, F, G&
+s, A, B, C, D \\
+
+\gdef\Efill{green}
+\input{Teilaufgaben/graph_g.tex} &
+F, G&
+s, A, B, C, D\\
+
+\gdef\Efill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+F, G&
+s, A, B, C, D, E\\
+
+\gdef\Ffill{green}
+\input{Teilaufgaben/graph_g.tex} &
+G &
+s, A, B, C, D, E\\
+
+\gdef\Ffill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+G &
+s, A, B, C, D, E, F\\
+
+\gdef\Gfill{green}
+\input{Teilaufgaben/graph_g.tex} &
+&
+s, A, B, C, D, E, F\\
+
+\gdef\Gfill{gray}
+\input{Teilaufgaben/graph_g.tex} &
+&
+s, a, B, C, D, E, F, G\\
+
+\end{longtable}
 
