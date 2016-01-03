@@ -14,3 +14,9 @@ Die Reduktion von 3-col auf 8-col kann in polynomieller Zeit erfolgen, indem zu 
 
 \subsection*{6.2.2 }
 
+\paragraph{NP (Verifikation in Polynomialzeit):}
+
+Ein Zertifikat für dieses Problem enthält sowohl S (Feld und Anfangsmarkierungen) als auch eine Markierung, die für eine Lösung gehalten wird. Der Verifikationsalgorithmus kann nun die Anfangsmarkierung und die Lösung Feld für Feld abgleichen, um zu prüfen, ob es überhaupt eine zulässige Lösung für S ist. Dann (oder bei einer intelligenten Implementation nebenbei) prüft er Zeilen- und Spaltenweise, ob die Bedingungen erfüllt sind. Selbst bei einer ungünstigen Implementation müssen so maximal $(2 * n^2) + n^2 + n^2 = 4*n^2$ Operationen durchgeführt werden (Jedes Feld wird 4 mal betrachtet).
+
+\paragraph{NP-hart:}
+
