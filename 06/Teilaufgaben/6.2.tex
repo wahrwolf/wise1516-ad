@@ -1,0 +1,16 @@
+\subsection*{6.2.1 NP-Vollständigkeit von 8-col}
+
+Wenn 3-col NP-Vollständig ist, ist auch 8-col NP-Vollständig.
+
+\paragraph{NP (Verifikation in Polynomialzeit):}
+
+Wie auch bei 3-col könnte ein Verifikationsalgorithmus für 8-col einen gegebenen, eingefärbten Graphen einfach Kantenweise darauf überprüfen, ob die verbundenen Knoten unterschiedlich gefärbt sind und nebenbei die Anzahl an bisher aufgetretenen Farben mitzählen. Die Laufzeit hängt so nur von der Kantenzahl ab und liegt in O($|$E$|$).
+
+Das Zertifikat müsste entsprechend den Graphen G(V,E) und zu jedem Knoten v aus V die Färbung enthalten.
+
+\paragraph{NP-hart:}
+
+Die Reduktion von 3-col auf 8-col kann in polynomieller Zeit erfolgen, indem zu einem Graphen G(V,E), der in 3-col liegt, 5 Knoten hinzugefügt werden. Diese werden untereinander und mit jedem bereits vorhandenen Knoten durch eine neue Kante verbunden und müssen dadurch 5 weitere, bisher ungenutzte Farben erhalten. Dazu müssen bloß $5 + |E|$ Operationen ausgeführt werden. Somit läuft dieser Vorgang in polynomieller Zeit ab.
+
+\subsection*{6.2.2 }
+
