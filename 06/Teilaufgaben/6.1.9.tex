@@ -1,0 +1,7 @@
+\subsection*{6.1.9 Unterschied: Dijkstra, PrimMST}
+
+Der Hauptunterschied liegt in der if-Anweisung der inneren (for-)Schleife.
+
+Dijkstras Algorithmus prüft zu jedem Knoten, ob der aktuell gefundene Weg dorthin kürzer ist, als der bisherige Weg dorthin (dessen Kosten bzw. Länge im Knoten gespeichert werden). Falls der neue Weg kürzer ist ersetzt er den alten durch diesen. Dadurch erstellt Dijkstras Algorithmus einen kürzesten-Pfade-Baum, der zu jedem Knoten des Graphen den, vom anfangs gewählten Startknoten aus betrachtet, kürzesten Weg enthält.
+
+PrimMST hingegen erzeugt - wie der Name schon sagt - einen Minimum Spanning Tree. Die if-Abfrage sorgt dafür, das immer die günstigst mögliche Kante im nächsten Schritt hinzugefügt wird, um einen weiteren Knoten aufzunehmen, bis alle Knoten im Baum enthalten sind. Dadurch sind (falls in dem Graphen möglich) alle Knoten miteinander auf die Weise verbunden, die insgesamt die minimalen Kosten verursacht.
