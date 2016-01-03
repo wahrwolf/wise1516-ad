@@ -10,19 +10,19 @@
 \node[draw, circle, fill=\Ffill] (F) [below of=E] {\Fdesc};
 \node[draw, circle, fill=\Gfill] (G) [right of=E] {\Gdesc};
 
-\path[draw=\sAcolor]	(A) 	edge node {1} (s);
-\path[draw=\sBcolor] 	(B)	edge node {4} (s);
-\path[draw=\sCcolor] 	(C)	edge node {9} (s);
-\path[draw=\ADcolor] 	(D) 	edge node {1} (A);
-\path[draw=\AEcolor] 	(E)	edge node {5} (A);
-\path[draw=\BAcolor] 	(A) 	edge node {5} (B);
-\path[draw=\BEcolor] 	(E)	edge node {2} (B);
-\path[draw=\CBcolor] 	(B) 	edge node {1} (C);
-\path[draw=\CFcolor] 	(F)	edge node {6} (C);
-\path[draw=\DBcolor] 	(B) 	edge node {1} (D);
-\path[draw=\DGcolor] 	(G)	edge node {15} (D);
-\path[draw=\ECcolor] 	(C) 	edge node {3} (E);
-\path[draw=\FGcolor] 	(G) 	edge node {1} (F);
-\path[draw=\GEcolor] 	(E) 	edge node {4} (G);
+\draw[\sAoption]	(A) 	edge node {1} (s);
+\draw[\sBoption] 	(B)	edge node {4} (s);
+\draw[\sCoption] 	(C)	edge node {9} (s);
+\draw[\ADoption] 	(D) 	edge node {1} (A);
+\draw[\AEoption] 	(E)	edge node {5} (A);
+\draw[\BAoption] 	(A) 	edge node {5} (B);
+\draw[\BEoption] 	(E)	edge node {2} (B);
+\draw[\CBoption] 	(B) 	edge node {1} (C);
+\draw[\CFoption] 	(F)	edge node {6} (C);
+\draw[\DBoption] 	(B) 	edge node {1} (D);
+\draw[\DGoption] 	(G)	edge node {15} (D);
+\draw[\ECoption] 	(C) 	edge node {3} (E);
+\draw[\FGoption] 	(G) 	edge node {1} (F);
+\draw[\GEoption] 	(E) 	edge node {4} (G);
 
 \end{tikzpicture}
