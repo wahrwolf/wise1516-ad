@@ -10,20 +10,20 @@
 \node[draw, circle, fill=\Ffill] (F) [below of=E] {\Fdesc};
 \node[draw, circle, fill=\Gfill] (G) [right of=E] {\Gdesc};
 
-\path[draw=\sAcolor]	(s) 	edge node {1} (A);
-\path[draw=\sBcolor] 	(s)	edge node {4} (B);
-\path[draw=\sCcolor] 	(s)	edge node {9} (C);
-\path[draw=\ADcolor] 	(A) 	edge node {1} (D);
-\path[draw=\AEcolor] 	(A)	edge node {5} (E);
-\path[draw=\BAcolor] 	(B) 	edge node {5} (A);
-\path[draw=\BEcolor] 	(B)	edge node {2} (E);
-\path[draw=\CBcolor] 	(C) 	edge node {1} (B);
-\path[draw=\CFcolor] 	(C)	edge node {6} (F);
-\path[draw=\DBcolor] 	(D) 	edge node {1} (B);
-\path[draw=\DGcolor] 	(D)	edge node {15} (G);
-\path[draw=\ECcolor] 	(E) 	edge node {3} (C);
-\path[draw=\FGcolor] 	(F) 	edge node {1} (G);
-\path[draw=\GEcolor] 	(G) 	edge node {4} (E);
+\draw[\sAcolor]	(s) 	edge node {1} (A);
+\draw[\sBcolor] 	(s)	edge node {4} (B);
+\draw[\sCcolor] 	(s)	edge node {9} (C);
+\draw[\ADcolor] 	(A) 	edge node {1} (D);
+\draw[\AEcolor] 	(A)	edge node {5} (E);
+\draw[\BAcolor] 	(B) 	edge node {5} (A);
+\draw[\BEcolor] 	(B)	edge node {2} (E);
+\draw[\CBcolor] 	(C) 	edge node {1} (B);
+\draw[\CFcolor] 	(C)	edge node {6} (F);
+\draw[\DBcolor] 	(D) 	edge node {1} (B);
+\draw[\DGcolor] 	(D)	edge node {15} (G);
+\draw[\ECcolor] 	(E) 	edge node {3} (C);
+\draw[\FGcolor] 	(F) 	edge node {1} (G);
+\draw[\GEcolor] 	(G) 	edge node {4} (E);
 
 \end{tikzpicture}
 
