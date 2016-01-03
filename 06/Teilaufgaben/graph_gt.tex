@@ -1,0 +1,28 @@
+\begin{tikzpicture}[->, semithick,auto, node distance=2.5cm]
+
+
+\node[draw, circle, fill=\sfill] (s) at (0,0) {\sdesc};
+\node[draw, circle, fill=\Afill] (A) [right of=s] {\Adesc};
+\node[draw, circle, fill=\Bfill] (B) [below of=A] {\Bdesc};
+\node[draw, circle, fill=\Cfill] (C) [below of=B] {\Cdesc};
+\node[draw, circle, fill=\Dfill] (D) [right of=A] {\Ddesc};
+\node[draw, circle, fill=\Efill] (E) [below of=D] {\Edesc};
+\node[draw, circle, fill=\Ffill] (F) [below of=E] {\Fdesc};
+\node[draw, circle, fill=\Gfill] (G) [right of=E] {\Gdesc};
+
+\path[draw=\sAcolor]	(A) 	edge node {1} (s);
+\path[draw=\sBcolor] 	(B)	edge node {4} (s);
+\path[draw=\sCcolor] 	(C)	edge node {9} (s);
+\path[draw=\ADcolor] 	(D) 	edge node {1} (A);
+\path[draw=\AEcolor] 	(E)	edge node {5} (A);
+\path[draw=\BAcolor] 	(A) 	edge node {5} (B);
+\path[draw=\BEcolor] 	(E)	edge node {2} (B);
+\path[draw=\CBcolor] 	(B) 	edge node {1} (C);
+\path[draw=\CFcolor] 	(F)	edge node {6} (C);
+\path[draw=\DBcolor] 	(B) 	edge node {1} (D);
+\path[draw=\DGcolor] 	(G)	edge node {15} (D);
+\path[draw=\ECcolor] 	(C) 	edge node {3} (E);
+\path[draw=\FGcolor] 	(G) 	edge node {1} (F);
+\path[draw=\GEcolor] 	(E) 	edge node {4} (G);
+
+\end{tikzpicture}

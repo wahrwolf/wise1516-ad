@@ -1,0 +1,51 @@
+\input{Teilaufgaben/default_node.tex}
+\gdef\Gfill{green}
+\gdef\Gdesc{G[8/9]}
+\gdef\Ffill{green}
+\gdef\Fdesc{F[7/10]}
+\gdef\Cfill{green}
+\gdef\Cdesc{C[6/11]}
+\gdef\Efill{green}
+\gdef\Edesc{E[5/12]}
+\gdef\Bfill{green}
+\gdef\Bdesc{B[4/13]}
+\gdef\Dfill{green}
+\gdef\Ddesc{D[3/14]}
+\gdef\Afill{green}
+\gdef\Adesc{A[2/15]}
+\gdef\sfill{green}
+\gdef\sdesc{s[1/16]}
+\subsection*{6.1.5 SCC}
+\subsubsection*{Schritt 1: Aufruf von DFS(G) zur Berechnung der Endzeiten $f[v]$}
+\input{Teilaufgaben/graph_g.tex}
+
+\subsubsection*{Schritt 2: Berechne $G^T$ (transponierter Graph)}
+\input{Teilaufgaben/graph_gt.tex}
+
+\subsubsection*{Schritt 3: Aufruf von DFS($G^T$)}
+Im folgenden sind die Werte in runden Klammern die Zeiten beim Aufruf von DFS($G^T$). Hierbei werden die vorherigen Zeiten pro Baum ersetzt.\\
+Wir beginnen die Tiefensuche beim Knoten $v$ mit dem größten Wert für $f[v]$(DFS(G)) und betrachten die Knoten in Reihenfolge fallender $f[v]$.
+Die Bäume sind farblich hervorgehoben.
+
+\gdef\sdesc{s(1/2)}
+\gdef\sfill{yellow}
+\input{Teilaufgaben/graph_gt.tex}
+
+\gdef\Adesc{A(3/16)}
+\gdef\Afill{magenta}
+\gdef\Bdesc{B(4/15)}
+\gdef\Bfill{magenta}
+\gdef\Cdesc{C(5/14)}
+\gdef\Cfill{magenta}
+\gdef\Edesc{E(6/13)}
+\gdef\Efill{magenta}
+\gdef\Gdesc{G(7/12)}
+\gdef\Gfill{magenta}
+\gdef\Ddesc{D(8/9)}
+\gdef\Dfill{magenta}
+\gdef\Fdesc{F(10/11)}
+\gdef\Ffill{magenta}
+\input{Teilaufgaben/graph_gt.tex}
+
+\subsubsection*{Schritt 4: Strenge Zusammenhangskomponenten}
+Die einzelnen Bäume in der obigen Grafik bilden die strengen Zusammenhangskomponenten unserer Graphen $G$, sowie $G^T$.
