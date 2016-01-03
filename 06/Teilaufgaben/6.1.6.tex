@@ -1,1 +1,13 @@
+\subsection*{6.1.6 Komponentengraph}
+\begin{center}
+\input{Teilaufgaben/graph_g.tex}
+\end{center}
+Der Komponentengraph aus dem obigen Graphen sind wie folgt aus:
+\begin{center}
+\begin{tikzpicture}[->,node distance=2cm]
+\node[draw, circle, fill=lightgray] (s) at (0,0) {s};
+\node[draw, circle, fill=lightgray] (abcdefg) [right of=s] {ABCDEFG};
 
+\draw[->, very thick] (s) -- (abcdefg);
+\end{tikzpicture}
+\end{center}
