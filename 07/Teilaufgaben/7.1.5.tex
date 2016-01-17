@@ -1,1 +1,13 @@
 \subsection*{7.1.5: Zusammenhang $|f|,f(S,T),c(S,T)$}
+
+Der Nettofluss des Schnittes ($f(S, T)$) ist immer gleich dem Wert eines Flusses in G ($|f|$), weil jeder zulässige Schnitt $s$ von $t$ trennt. Da zwischen $s$ und $t$ keine Verluste auftreten, muss also jeder Schnitt den gesamten Fluss schneiden. Da es sich um den Nettofluss handelt, ist es zudem unerheblich, ob der Fluss (teilweise) mehrfach den Schnitt "kreuzt", weil letztlich der komplette Fluss aus s entspringt und zu t führt.
+
+Formal beweisen lässt sich das mithilfe der Sätze aus dem Skript:
+
+$f(S,T) = f(S,V) - f(S,S) = f(S,V) = f(s,V) + f(S-s,V) = f(s,V) = |f|.$
+
+
+Außerdem gilt $|f| = f(S,T) <= c(S,T)$, weil im Allgemeinen für Flüsse $f(u,v) <= c(u,v)$ gilt. Da das für beliebige Flüsse in $G$ gilt, gilt es im Speziellen auch für die Flüsse und deren Kapazitäten, die den Schnitt kreuzen. \\
+Diese Flüsse werden nun zu $f(S,T)$ aufsummiert, wobei es kein Problem ist, dass für $c(S,T)$ nur die Kapazitäten der Kanten von $S$ nach $T$ relevant sind, weil Flüsse, die Kapazitäten in entgegengesetzter Richtung nutzen, ''später'' auch wieder nach $T$ fließen müssen.
+
+Bei einem maximalen Fluss und der Kapazität eines minimalen Schnitts besteht sogar tatsächlich Gleichheit (nach dem Max-Flow-Min-Cut-Theorem).
